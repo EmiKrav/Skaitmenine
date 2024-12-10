@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+
+ <body>
+ 
+<script >
+  function play () {
+   
+  }
+  function stop () {
+    
+  }
+  function next () {
+   
+  }
+ 
+function update() {
+   
+}
+//txt
+function read(){
+fetch('cas.txt')
+  .then(response => response.text())
+  .then(text => console.log("logo" +text))
+  const url = "untitled.html";
+
+ 
+fetch(url)
+  .then((response) => response.text())
+  .then((text2) => {
+  let parser = new DOMParser();
+          doc = parser.parseFromString( text2, 'text/html' );
+//doc.getElementById("manoduom1").innerHTML)
+//dom.getElementById("manoduom1").innerHTML.replaceWith("true")
+//var som = doc.getElementById("manoduom1").innerHTML;
+var som = doc.getElementById("manoduom1").innerHTML;
+ // .then((test) => {
+ console.log( "logo" +som);
+ let newEle = '<div id ="manoduom1"> You</div>';
+doc.getElementById("manoduom1").outerHTML  = newEle;
+var som = doc.getElementById("manoduom1").innerHTML;
+ // .then((test) => {
+ console.log("logo" +som);
+    //Do something with test.
+  });
+}
+//json
+//fetch('file.json')
+ // .then(response => response.json())
+ // .then(jsonResponse => console.log(jsonResponse))     
+ //  // outputs a javascript object from the parsed json
+
+ </script>
+  </body>
+  </html>  
